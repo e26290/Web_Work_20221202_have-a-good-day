@@ -1,0 +1,485 @@
+html {
+  border: solid 1px black;
+  font-family: "Noto Sans TC", "Roboto", sans-serif, serif;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+a, p, span, input, button {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, label, input, a, p, button, span {
+  letter-spacing: 2px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+button:focus, button:active {
+  outline: none;
+}
+
+input {
+  border: none;
+}
+input:focus, input:active {
+  outline: none;
+}
+
+.more {
+  color: #9E602A;
+  padding: 8px 24px;
+  background-color: transparent;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+}
+
+.navbar {
+  background-color: #E7E7E7;
+  padding: 0px 200px;
+}
+.navbar .logo {
+  width: 160px;
+  height: auto;
+  border-radius: 0;
+  margin-right: 32px;
+}
+.navbar .mobile_btns .m_btns {
+  display: none;
+  background-color: none;
+  padding: 4px 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar .mobile_btns .navbar-toggler {
+  border: none;
+}
+.navbar .collapse {
+  border-left: solid 1px #9E602A;
+  padding-left: 32px;
+  position: relative;
+}
+.navbar .collapse .nav-link, .navbar .collapse .nav-link:hover, .navbar .collapse .nav-link:active, .navbar .collapse .nav-link:focus, .navbar .collapse .signin {
+  color: #9E602A;
+  font-size: 15px;
+}
+.navbar .collapse .search {
+  border-radius: 5px;
+  border: solid 1px #9E602A;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .collapse .search input {
+  max-width: 160px;
+  border: none;
+}
+.navbar .collapse .search input:focus, .navbar .collapse .search input:active {
+  outline: none;
+}
+.navbar .collapse .search input::-moz-placeholder {
+  color: #b8a798;
+}
+.navbar .collapse .search input:-ms-input-placeholder {
+  color: #b8a798;
+}
+.navbar .collapse .search input::placeholder {
+  color: #b8a798;
+}
+.navbar .collapse .search i {
+  font-size: 16px;
+  color: #9E602A;
+}
+.navbar .collapse .signin {
+  margin: 0px 16px;
+}
+.navbar .collapse .cart {
+  position: relative;
+}
+.navbar .collapse .cart i {
+  font-size: 24px;
+  color: #9E602A;
+}
+.navbar .collapse .cart .num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: solid 2px #9E602A;
+  position: absolute;
+  left: 16px;
+  top: -8px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: #9E602A;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.carousel .content {
+  z-index: 999;
+  position: absolute;
+  color: #2C2C2C;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.carousel .content h4 {
+  margin: 40px 0px;
+  text-align: center;
+  line-height: 1.5;
+}
+.carousel .carousel-indicators {
+  padding-bottom: 30px;
+}
+.carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0px 4px;
+}
+.carousel .carousel-indicators .active {
+  background-color: #9E602A;
+}
+
+.warp {
+  padding: 16px 360px;
+}
+.warp .newestSale, .warp .hot, .warp .theme {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.warp .mainTitle {
+  color: #9E602A;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.warp .mainImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.warp .row {
+  flex-wrap: nowrap;
+}
+.warp .newProduct {
+  position: relative;
+  padding-bottom: 16px;
+  padding-top: 300px;
+}
+.warp .newProduct .content {
+  text-align: center;
+}
+.warp .newProduct .content h4 {
+  font-weight: 700;
+}
+.warp .newProduct .content p {
+  margin-top: 16px;
+}
+.warp .newPic1 {
+  background-image: url(https://shoplineimg.com/55d3ecabe37ec6fbbf00003f/62fc5c2cc61e8e002861f1eb/800x.webp?source_format=jpg);
+}
+.warp .newPic2 {
+  background-image: url(https://shoplineimg.com/55d3ecabe37ec6fbbf00003f/627cc56b24756000106aefd0/800x.webp?source_format=jpg);
+}
+.warp .newProduct:nth-child(1) {
+  margin-right: 16px;
+}
+.warp .hot .container-fill .slider .hotCard {
+  padding: 4px 8px;
+}
+.warp .hot .container-fill .slider .hotCard img {
+  width: 100%;
+  height: auto;
+}
+.warp .hot .container-fill .slider .hotCard h4, .warp .hot .container-fill .slider .hotCard h5 {
+  text-align: center;
+}
+.warp .hot .container-fill .slider .hotCard h4 {
+  margin: 12px 0px;
+}
+.warp .hot .container-fill .slider .hotCard h5 {
+  font-weight: 700;
+}
+.warp .theme .mainImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+.warp .theme .mainImg h4 {
+  padding: 6px 12px;
+  background-color: rgba(158, 96, 42, 0.7);
+}
+.warp .theme .container-fill {
+  margin-bottom: 16px;
+}
+.warp .theme .theme1, .warp .theme .theme2 {
+  height: 360px;
+}
+.warp .theme .theme3, .warp .theme .theme4 {
+  height: 220px;
+  background: blue;
+}
+.warp .theme .theme1, .warp .theme .theme3 {
+  margin-right: 16px;
+}
+.warp .theme .theme1 {
+  background-image: url(https://img.freepik.com/free-photo/fashion-set_1203-7559.jpg?w=740&t=st=1669886443~exp=1669887043~hmac=8ea8304b2132e95081c3653e8ddf281097c369347961136a618799865229763e);
+}
+.warp .theme .theme2 {
+  background-image: url(https://img.freepik.com/free-photo/top-view-circular-food-frame_23-2148723455.jpg?w=1060&t=st=1669886517~exp=1669887117~hmac=50ce94ff73dc4375e581443797e1c15cb2d6a40d999f643b31df29f0cb9d129f);
+}
+.warp .theme .theme3 {
+  background-image: url(https://img.freepik.com/free-photo/various-types-tea-ceramic-cup-dry-grapefruit-slices-with-lemon-wooden-background_23-2148028201.jpg?w=1060&t=st=1669887105~exp=1669887705~hmac=4a4cce23e3a66a84b0f98d35e6ab7f3639708d8ea627a9ac9d56623875bab0a0);
+}
+.warp .theme .theme4 {
+  background-image: url(https://img.freepik.com/free-photo/top-view-cups-coffee-table_23-2148900647.jpg?w=1380&t=st=1669887510~exp=1669888110~hmac=d1b8fe7ef202dbc2eea6638a1e302eb0d4df5f9f8ccaa24645f9b1adcf6470c9);
+}
+
+.activity {
+  padding: 64px 360px;
+  background-image: url(https://img.freepik.com/free-photo/aromatic-candles-wooden-shelf_181624-23343.jpg?w=1060&t=st=1669885190~exp=1669885790~hmac=f5e0d17269f1d1010107183b5735f408404eefb46a63bfef9d91e3623f7391b1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.activity .content {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 24px;
+  max-width: 400px;
+}
+.activity .content h1, .activity .content h2 {
+  font-weight: 700;
+}
+.activity .content h1 {
+  color: #9E602A;
+}
+.activity .content h2 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.activity .content h5 {
+  font-weight: 400;
+  line-height: 1.5;
+}
+.activity .content .btn {
+  padding: 0;
+  padding-top: 12px;
+}
+.activity .content .btn .next {
+  background-color: #9E602A;
+  color: #FFFFFF;
+  margin-right: 16px;
+}
+
+.footer {
+  background-color: #2C2C2C;
+  padding: 36px 200px;
+}
+.footer span, .footer i {
+  color: #FFFFFF;
+}
+.footer .f_logo {
+  display: flex;
+  justify-content: center;
+}
+.footer .f_logo img {
+  max-width: 160px;
+}
+.footer .f_nav {
+  margin: 24px auto;
+  max-width: 768px;
+}
+.footer .f_nav .item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .f_nav .item ul {
+  margin-top: 12px;
+}
+.footer .f_nav .item ul li {
+  margin-bottom: 4px;
+}
+.footer .f_nav .item ul a {
+  color: #888888;
+}
+.footer .f_nav .item ul a:hover {
+  color: #FFFFFF;
+}
+.footer .socialMedia {
+  display: flex;
+  justify-content: center;
+}
+.footer .socialMedia a:nth-child(-n+2) {
+  margin-right: 16px;
+}
+.footer .socialMedia i {
+  font-size: 24px;
+}
+.footer .copyright {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 24px;
+  color: #E7E7E7;
+}
+
+@media (max-width: 1400px) {
+  .navbar {
+    padding: 16px 200px;
+  }
+  .navbar .logo {
+    width: 120px;
+    height: auto;
+    border-radius: 0;
+    margin-right: 0px;
+  }
+  .navbar .collapse {
+    padding-left: 4px;
+  }
+  .navbar .collapse .search input {
+    max-width: 100px;
+  }
+  .navbar .collapse .signin {
+    margin: 0px;
+  }
+  .warp {
+    padding: 16px 200px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 16px 100px;
+  }
+  .warp {
+    padding: 16px 100px;
+  }
+  .activity {
+    padding: 64px 100px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar .mobile_btns .m_btns {
+    display: inline;
+  }
+  .navbar .collapse {
+    border: none;
+    margin-bottom: 16px;
+  }
+  .navbar .collapse .search, .navbar .collapse .signin, .navbar .collapse .cart {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .navbar {
+    padding: 0px 100px;
+  }
+  .carousel .content h4 {
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0px 16px;
+  }
+  .carousel .content h1 {
+    font-size: 24px;
+  }
+  .carousel .content h4 {
+    font-size: 16px;
+  }
+  .carousel .carousel-indicators {
+    padding-bottom: 8px;
+  }
+  .carousel .carousel-indicators li {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: 0px 4px;
+  }
+  .warp {
+    padding: 0px 36px;
+  }
+  .warp .row {
+    flex-wrap: wrap;
+  }
+  .warp .row .newProduct {
+    margin-bottom: 24px;
+  }
+  .warp .row .newProduct:nth-child(1) {
+    margin-right: 0px;
+  }
+  .warp .theme .theme1, .warp .theme .theme2, .warp .theme .theme3, .warp .theme .theme4 {
+    margin-bottom: 16px;
+    height: 160px;
+    margin-right: 0px;
+  }
+  .activity {
+    padding: 64px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .activity .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    padding: 36px 16px;
+  }
+}
+@media (max-width: 575px) {
+  .carousel .content h1 {
+    font-size: 18px;
+  }
+  .carousel .content h4 {
+    font-size: 14px;
+    margin: 4px 0px;
+  }
+  .carousel .carousel-indicators {
+    display: none;
+  }
+  .footer .f_nav .item {
+    margin-bottom: 24px;
+  }
+}/*# sourceMappingURL=style.css.map */

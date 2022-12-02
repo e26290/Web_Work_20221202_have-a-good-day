@@ -1,0 +1,388 @@
+html
+    border: solid 1px black
+    font-family: 'Noto Sans TC', 'Roboto', sans-serif, serif
+    vertical-align: top
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    
+// ColorStyle
+$brown: #9E602A
+$brownlight: #b8a798
+$grey: #888888
+$greylight: #E7E7E7
+$white: #FFFFFF
+$black: #2C2C2C
+
+// 定義元件
+@mixin size($w,$h:$w,$bdrs:0)
+    width: $w
+    height: $h
+    border-radius: $bdrs
+@mixin flex($j:center,$a:center)
+    display: flex
+    justify-content: $j
+    align-items: $a
+@mixin abpos($l:initial,$t:initial)
+    position: absolute
+    left: $l
+    top: $t
+
+// TagStyle
+h1
+    font-size: 40px
+h2
+    font-size: 32px
+h3
+    font-size: 24px
+h4
+    font-size: 20px
+h5
+    font-size: 18px
+h6
+    font-size: 16px
+a, p, span, input, button
+    font-size: 14px
+h1, h2, h3, h4, label, input, a, p, button, span
+    letter-spacing: 2px
+button
+    border: none
+    cursor: pointer
+    background-color: transparent
+    &:focus, &:active
+        outline: none
+input
+    border: none
+    &:focus, &:active
+        outline: none
+.more
+    color: $brown
+    padding: 8px 24px
+    // border: solid 1px $brown
+    background-color: transparent
+    border-radius: 50px
+    background-color: $white
+
+// nav
+.navbar
+    background-color: $greylight
+    padding: 0px 200px
+    .logo
+        +size(160px,auto)
+        margin-right: 32px
+    .mobile_btns
+        .m_btns
+            display: none
+            background-color: none
+            padding: 4px 12px
+            color: rgba(0,0,0,.5)
+        .navbar-toggler
+            border: none
+
+    .collapse
+        border-left: solid 1px $brown
+        padding-left: 32px
+        position: relative
+        .nav-link, .nav-link:hover, .nav-link:active, .nav-link:focus, .signin
+            color: $brown
+            font-size: 15px
+        .search
+            border-radius: 5px
+            border: solid 1px $brown
+            background: $white
+            +flex
+            input
+                max-width: 160px
+                border: none
+                &:focus, &:active
+                    outline: none
+                &::placeholder
+                    color: $brownlight
+            i
+                font-size: 16px
+                color: $brown
+        .signin
+            margin: 0px 16px
+        .cart
+            position: relative
+            i
+                font-size: 24px
+                color: $brown
+            .num
+                +size(24px,24px,50%)
+                background: $white
+                border: solid 2px $brown
+                +abpos(16px,-8px)
+                font-size: 16px
+                line-height: 1.2
+                text-align: center
+                color: $brown
+
+// Banner
+.carousel
+    +flex
+    position: relative
+    .content
+        z-index: 999
+        position: absolute
+        color: $black
+        font-weight: 700
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 40px
+        h4
+            margin: 40px 0px
+            text-align: center
+            line-height: 1.5
+
+    .carousel-indicators
+        padding-bottom: 30px
+        li
+            +size(10px,10px,50%)
+            margin: 0px 4px
+        .active
+            background-color: $brown
+
+// Warp
+.warp
+    padding: 16px 360px
+    .newestSale, .hot, .theme
+        padding-top: 48px
+        padding-bottom: 48px
+    .mainTitle
+        color: $brown
+        font-weight: 700
+        text-align: center
+        margin-bottom: 24px
+    .mainImg
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+    .row
+        flex-wrap: nowrap
+    .newProduct
+        position: relative
+        padding-bottom: 16px
+        padding-top: 300px
+        .content
+            text-align: center
+            h4
+                font-weight: 700
+            p
+                margin-top: 16px   
+    .newPic1
+        background-image: url(https://shoplineimg.com/55d3ecabe37ec6fbbf00003f/62fc5c2cc61e8e002861f1eb/800x.webp?source_format=jpg)
+    .newPic2
+        background-image: url(https://shoplineimg.com/55d3ecabe37ec6fbbf00003f/627cc56b24756000106aefd0/800x.webp?source_format=jpg)
+
+    .newProduct:nth-child(1)
+        margin-right: 16px
+    
+    .hot
+        .container-fill
+            .slider
+                .hotCard
+                    padding: 4px 8px
+                    img
+                        width: 100%
+                        height: auto
+                    h4, h5
+                        text-align: center
+                    h4
+                        margin: 12px 0px
+                    h5
+                        font-weight: 700
+
+    .theme
+        .mainImg
+            +flex
+            color: $white
+            h4
+                padding: 6px 12px
+                background-color: rgba($brown, 0.7)
+        .container-fill
+            margin-bottom: 16px
+        .theme1, .theme2
+            height: 360px
+        .theme3, .theme4
+            height: 220px
+            background: blue
+        .theme1, .theme3
+            margin-right: 16px
+        .theme1
+            background-image: url(https://img.freepik.com/free-photo/fashion-set_1203-7559.jpg?w=740&t=st=1669886443~exp=1669887043~hmac=8ea8304b2132e95081c3653e8ddf281097c369347961136a618799865229763e)
+        .theme2
+            background-image: url(https://img.freepik.com/free-photo/top-view-circular-food-frame_23-2148723455.jpg?w=1060&t=st=1669886517~exp=1669887117~hmac=50ce94ff73dc4375e581443797e1c15cb2d6a40d999f643b31df29f0cb9d129f)
+        .theme3
+            background-image: url(https://img.freepik.com/free-photo/various-types-tea-ceramic-cup-dry-grapefruit-slices-with-lemon-wooden-background_23-2148028201.jpg?w=1060&t=st=1669887105~exp=1669887705~hmac=4a4cce23e3a66a84b0f98d35e6ab7f3639708d8ea627a9ac9d56623875bab0a0)
+        .theme4
+            background-image: url(https://img.freepik.com/free-photo/top-view-cups-coffee-table_23-2148900647.jpg?w=1380&t=st=1669887510~exp=1669888110~hmac=d1b8fe7ef202dbc2eea6638a1e302eb0d4df5f9f8ccaa24645f9b1adcf6470c9)
+
+// activity
+.activity
+    padding: 64px 360px
+    background-image: url(https://img.freepik.com/free-photo/aromatic-candles-wooden-shelf_181624-23343.jpg?w=1060&t=st=1669885190~exp=1669885790~hmac=f5e0d17269f1d1010107183b5735f408404eefb46a63bfef9d91e3623f7391b1)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    .content
+        background-color: rgba($white, 0.5)
+        padding: 24px
+        max-width: 400px
+        h1, h2
+            font-weight: 700
+        h1
+            color: $brown
+        h2
+            margin-top: 24px
+            margin-bottom: 12px
+        h5
+            font-weight: 400
+            line-height: 1.5
+        .btn
+            padding: 0
+            padding-top: 12px
+            .next
+                background-color: $brown
+                color: $white
+                margin-right: 16px
+
+// footer
+.footer
+    background-color: $black
+    padding: 36px 200px
+    // +flex
+    span, i
+        color: $white
+    .f_logo
+        display: flex
+        justify-content: center
+        img
+            max-width: 160px
+    .f_nav
+        margin: 24px auto
+        max-width: 768px
+        .item
+            display: flex
+            align-items: center
+            flex-direction: column
+            ul
+                margin-top: 12px
+                li
+                    margin-bottom: 4px
+                a
+                    color: $grey
+                    &:hover
+                        color: $white
+    .socialMedia
+        display: flex
+        justify-content: center
+        a:nth-child(-n+2)
+            margin-right: 16px
+        i
+            font-size: 24px
+    .copyright
+        text-align: center
+        font-size: 12px
+        letter-spacing: 2px
+        margin-top: 24px
+        color: $greylight
+
+
+@media(max-width: 1400px)
+    .navbar
+        padding: 16px 200px
+        .logo
+            +size(120px,auto)
+            margin-right: 0px
+        .collapse
+            padding-left: 4px
+            .search
+                input
+                    max-width: 100px
+            .signin
+                margin: 0px
+    .warp
+        padding: 16px 200px
+
+@media(max-width: 1200px)
+    .navbar
+        padding: 16px 100px
+    .warp
+        padding: 16px 100px
+    .activity
+        padding: 64px 100px
+@media(max-width: 991px)
+    .navbar
+        .mobile_btns
+            .m_btns
+                display: inline
+        .collapse
+            border: none
+            margin-bottom: 16px
+            .search, .signin, .cart
+                display: none
+@media(max-width: 960px)
+    .navbar
+        padding: 0px 100px
+    .carousel
+        .content
+            h4
+                margin: 10px 0px
+
+@media(max-width: 768px)
+    .navbar
+        padding: 0px 16px
+    .carousel
+        .content
+            h1
+                font-size: 24px
+            h4
+                font-size: 16px
+        .carousel-indicators
+            padding-bottom: 8px
+            li
+                +size(4px,4px,50%)
+                margin: 0px 4px
+
+    .warp
+        padding: 0px 36px
+        .row
+            flex-wrap: wrap
+            .newProduct
+                margin-bottom: 24px
+            .newProduct:nth-child(1)
+                margin-right: 0px
+        .theme
+            .theme1, .theme2, .theme3, .theme4
+                margin-bottom: 16px
+                height: 160px
+                margin-right: 0px
+            
+    .activity
+        padding: 64px 16px
+        +flex
+        .content
+            display: flex
+            flex-direction: column
+            align-items: center
+    .footer
+        padding: 36px 16px
+
+@media(max-width: 575px)
+    .carousel
+        .content
+            h1
+                font-size: 18px
+            h4
+                font-size: 14px
+                margin: 4px 0px
+        .carousel-indicators
+            display: none
+        
+    .footer
+        .f_nav
+            .item
+                margin-bottom: 24px
+
